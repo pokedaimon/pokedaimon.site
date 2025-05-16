@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,101 +11,40 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
+    }header img {
+  width: 100%;
+  max-width: 450px;
+  margin-top: 1rem;
+}
 
-    header img {
-      width: 100%;
-      max-width: 450px;
-      margin-top: 1rem;
-    }
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem;
+}
 
-    .buttons-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin: 2rem 0;
-    }
+.btn-link {
+  background-color: #e0e0e0;
+  color: black;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-    .btn-link {
-      background-color: #e0e0e0;
-      color: black;
-      padding: 0.6rem 1.2rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: 'Arial', sans-serif;
-      font-size: 1rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+.btn-link:hover {
+  transform: scale(1.05);
+  color: #fff7c6;
+}
 
-    .btn-link:hover {
-      transform: scale(1.05);
-      color: #FFFFE6;
-    }
+.disclaimer {
+  background-color: #fff7e6;
+  border-radius: 1rem;
+  padding: 1.
 
-    .disclaimer {
-      background-color: #fff7e6;
-      padding: 1.5rem;
-      border-radius: 20px;
-      width: 90%;
-      max-width: 800px;
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-    }
-
-    .disclaimer b {
-      font-weight: bold;
-    }
-
-    footer {
-      margin-bottom: 2rem;
-      color: white;
-      font-size: 0.9rem;
-    }
-
-    .unown-desktop {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      width: 120px;
-      opacity: 0.2;
-      display: none;
-    }
-
-    @media (min-width: 768px) {
-      .unown-desktop {
-        display: block;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="banner.png" alt="PokéDaimon Logo" />
-  </header>
-
-  <div class="buttons-container">
-    <a href="#" class="btn-link">Sobre</a>
-    <a href="#" class="btn-link">Instagram</a>
-    <a href="#" class="btn-link">YouTube</a>
-    <a href="#" class="btn-link">Aventuras de Jogos</a>
-    <a href="#" class="btn-link">Contato</a>
-    <a href="#" class="btn-link">PokéConversa</a>
-  </div>
-
-  <div class="disclaimer">
-    <b>Importante:</b> A PokéDaimon é um projeto independente de fã, dedicado à celebração do universo Pokémon. Não possuímos, nem reivindicamos, direitos sobre qualquer imagem, nome, marca registrada ou conceito relacionado à franquia Pokémon. Todos os personagens, imagens e propriedades intelectuais mencionadas ou utilizadas neste site são de propriedade exclusiva de seus respectivos detentores.
-  </div>
-
-  <footer>
-    © 2025 PokéDaimon | Projeto Fã
-  </footer>
-
-  <!-- Unown Image (Desktop only) -->
-  <img src="unown-fnxl.png" alt="Unown Letras" class="unown-desktop" />
-
-</body>
-</html>
