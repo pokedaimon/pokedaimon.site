@@ -1,105 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PokéDaimon</title>
-    <style>
-        body {
-            margin: 0;
-            background-color: #02b5bd;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokéDaimon</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #02b5bd;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
 
-        header img {
-            width: 100%;
-            max-width: 450px;
-            margin-top: 1rem;
-        }
+    header img {
+      width: 100%;
+      max-width: 450px;
+      margin-top: 1rem;
+    }
 
-        .buttons-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin: 2rem;
-        }
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem;
+    }
 
-        .btn-link {
-            background-color: #e0e0e0;
-            color: black;
-            padding: 0.6rem 1.2rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: bold;
-            font-family: 'Arial', sans-serif;
-            font-size: 1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+    .btn-link {
+      background-color: #e0e0e0;
+      color: black;
+      padding: 0.6rem 1.2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+      font-size: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-        .btn-link:hover {
-            transform: scale(1.05);
-            color: #fff7e6;
-        }
+    .btn-link:hover {
+      transform: scale(1.05);
+      color: #fff7e6;
+    }
 
-        .disclaimer {
-            background-color: #fff7e6;
-            border-radius: 1rem;
-            padding: 1.5rem;
-            margin: 2rem;
-            max-width: 600px;
-            text-align: center;
-        }
+    .disclaimer {
+      background-color: #fff7e6;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 2rem;
+      max-width: 600px;
+      text-align: center;
+    }
 
-        footer {
-            color: white;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
+    footer {
+      color: white;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
 
-        /* Unown image - left center desktop only */
-        .unown-desktop {
-            display: none;
-        }
+    .unown-image {
+      position: fixed;
+      top: 50%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      z-index: 1;
+      pointer-events: none;
+    }
 
-        @media screen and (min-width: 768px) {
-            .unown-desktop {
-                display: block;
-                position: absolute;
-                left: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 140px;
-                z-index: 0;
-                pointer-events: none;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .unown-image {
+        width: 80px;
+        left: 15%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="banner.png" alt="PokéDaimon Logo">
-    </header>
+  <header>
+    <img src="banner.png" alt="PokéDaimon Logo">
+  </header>
 
-    <div class="buttons-container">
-        <a href="#" class="btn-link">Sobre</a>
-        <a href="#" class="btn-link">Instagram</a>
-        <a href="#" class="btn-link">YouTube</a>
-        <a href="#" class="btn-link">Aventuras de Jogos</a>
-        <a href="#" class="btn-link">Contato</a>
-        <a href="#" class="btn-link">PokéConversa</a>
-    </div>
+  <div class="buttons-container">
+    <a href="#" class="btn-link">Sobre</a>
+    <a href="#" class="btn-link">Instagram</a>
+    <a href="#" class="btn-link">YouTube</a>
+    <a href="#" class="btn-link">Aventuras de Jogos</a>
+    <a href="#" class="btn-link">Contato</a>
+    <a href="#" class="btn-link">PokéConversa</a>
+  </div>
 
-    <div class="disclaimer">
-        <strong>Importante:</strong> A PokéDaimon é um projeto independente de fã, dedicado à celebração do universo Pokémon. Não possuímos, nem reivindicamos, direitos sobre qualquer imagem, nome, marca registrada ou conceito relacionado à franquia Pokémon. Todos os personagens, imagens e propriedades intelectuais mencionadas ou utilizadas neste site são de propriedade exclusiva de seus respectivos detentores.
-    </div>
+  <div class="disclaimer">
+    <strong>Importante:</strong> A PokéDaimon é um projeto independente de fã, dedicado à celebração do universo Pokémon. Não possuímos, nem reivindicamos, direitos sobre qualquer imagem, nome, marca registrada ou conceito relacionado à franquia Pokémon. Todos os personagens, imagens e propriedades intelectuais mencionadas ou utilizadas neste site são de propriedade exclusiva de seus respectivos detentores.
+  </div>
 
-    <footer>© 2025 PokéDaimon | Projeto Fã</footer>
+  <footer>© 2025 PokéDaimon | Projeto Fã</footer>
 
-    <img class="unown-desktop" src="unown.png" alt="Unown Background" />
+  <img class="unown-image" src="unown.png" alt="Unown Background" />
 </body>
 </html>
