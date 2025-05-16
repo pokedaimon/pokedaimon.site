@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      background-color: #30BCFF;
+      background-color: #30cccf;
       font-family: 'Arial', sans-serif;
       display: flex;
       flex-direction: column;
@@ -35,58 +35,70 @@
       border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
+      font-family: 'Arial', sans-serif;
       font-size: 1rem;
-      transition: 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .btn-link:hover {
-      scale: 1.05;
-      color: #FFFFE6;
+      transform: scale(1.05);
+      color: #fff7e6;
     }
 
     .disclaimer {
-      background-color: #fff5e1;
-      margin: 2rem;
-      padding: 1.5rem;
+      background-color: #fff7e6;
       border-radius: 1rem;
-      max-width: 800px;
-      font-size: 1.1rem;
+      padding: 1.5rem;
+      margin: 2rem;
+      max-width: 600px;
+      text-align: center;
     }
 
     footer {
-      margin-bottom: 2rem;
-      color: #ffffff;
+      color: white;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
     }
 
+    /* Unown background image (desktop only) */
     .unown-desktop {
       position: absolute;
-      right: 2rem;
-      top: 5rem;
-      width: 250px;
-      opacity: 0.2;
+      top: 20px;
+      right: 20px;
+      width: 120px;
+      opacity: 0.06;
       z-index: 0;
+      pointer-events: none;
+      user-select: none;
+      display: none;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
       .unown-desktop {
-        display: none;
+        display: block;
       }
     }
   </style>
 </head>
 <body>
 
-  <img src="banner.png" alt="Banner da PokéDaimon" />
-  <img src="unown-fnxl.png" class="unown-desktop" alt="Unown FNLX" />
+  <!-- Imagem decorativa dos Unown -->
+  <img src="banner.png" alt="Unown" class="unown-desktop" />
+
+  <header>
+    <img src="logo.png" alt="PokéDaimon Logo" />
+    <img src="gameboy.png" alt="Gameboy Pokémon Green" />
+    <img src="pikachu.png" alt="Pikachu" style="width: 150px; margin-top: -80px;" />
+  </header>
 
   <div class="buttons-container">
-    <a class="btn-link" href="#">Sobre</a>
-    <a class="btn-link" href="#">Instagram</a>
-    <a class="btn-link" href="#">YouTube</a>
-    <a class="btn-link" href="#">Aventuras de Jogos</a>
-    <a class="btn-link" href="#">Contato</a>
-    <a class="btn-link" href="#">PokéConversa</a>
+    <a href="#" class="btn-link">Sobre</a>
+    <a href="#" class="btn-link">Instagram</a>
+    <a href="#" class="btn-link">YouTube</a>
+    <a href="#" class="btn-link">Aventuras de Jogos</a>
+    <a href="#" class="btn-link">Contato</a>
+    <a href="#" class="btn-link">PokéConversa</a>
   </div>
 
   <div class="disclaimer">
