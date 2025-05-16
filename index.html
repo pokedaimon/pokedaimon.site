@@ -40,7 +40,7 @@
 
 .btn-link:hover {
   transform: scale(1.05);
-  color: #fff7c6;
+  color: #fff7e6;
 }
 
 .disclaimer {
@@ -58,21 +58,20 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Unown image only on desktop, left aligned */
+/* Imagem Unown no desktop */
 .unown-desktop {
-  display: none;
+  position: absolute;
+  top: 35%;
+  left: 20px;
+  width: 120px;
+  opacity: 0.25;
+  z-index: 0;
+  pointer-events: none;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .unown-desktop {
-    display: block;
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
-    width: 100px;
-    opacity: 0.08;
-    pointer-events: none;
-    z-index: 0;
+    display: none;
   }
 }
 
@@ -81,17 +80,17 @@ footer {
 <body>
   <header>
     <img src="banner.png" alt="PokéDaimon Logo" />
-  </header>  <div class="buttons-container">
-    <a class="btn-link" href="#">Sobre</a>
-    <a class="btn-link" href="#">Instagram</a>
-    <a class="btn-link" href="#">YouTube</a>
-    <a class="btn-link" href="#">Aventuras de Jogos</a>
-    <a class="btn-link" href="#">Contato</a>
-    <a class="btn-link" href="#">PokéConversa</a>
+  </header>  <img class="unown-desktop" src="unown.png" alt="Unown" />  <div class="buttons-container">
+    <a href="#" class="btn-link">Sobre</a>
+    <a href="#" class="btn-link">Instagram</a>
+    <a href="#" class="btn-link">YouTube</a>
+    <a href="#" class="btn-link">Aventuras de Jogos</a>
+    <a href="#" class="btn-link">Contato</a>
+    <a href="#" class="btn-link">PokéConversa</a>
   </div>  <div class="disclaimer">
     <strong>Importante:</strong> A PokéDaimon é um projeto independente de fã, dedicado à celebração do universo Pokémon. Não possuímos, nem reivindicamos, direitos sobre qualquer imagem, nome, marca registrada ou conceito relacionado à franquia Pokémon. Todos os personagens, imagens e propriedades intelectuais mencionadas ou utilizadas neste site são de propriedade exclusiva de seus respectivos detentores.
   </div>  <footer>
     © 2025 PokéDaimon | Projeto Fã
-  </footer>  <!-- Imagem Unown - canto inferior esquerdo -->  <img class="unown-desktop" src="unown.png" alt="Unown" />
+  </footer>
 </body>
 </html>
