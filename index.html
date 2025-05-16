@@ -6,18 +6,19 @@
   <title>PokéDaimon</title>
   <style>
     body {
-      margin: 0;
       background-color: #02b5bd;
       font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
     }
 
     header img {
       width: 100%;
-      max-width: 450px;
+      max-width: 900px;
+      height: auto;
       margin-top: 1rem;
     }
 
@@ -26,7 +27,7 @@
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
-      margin: 2rem;
+      margin: 2rem 1rem;
     }
 
     .btn-link {
@@ -36,10 +37,9 @@
       border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
-      font-family: 'Arial', sans-serif;
       font-size: 1rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .btn-link:hover {
@@ -61,45 +61,30 @@
       font-size: 0.9rem;
       margin-bottom: 1rem;
     }
-
-    .unown-image {
-      position: fixed;
-      top: 50%;
-      left: 10%;
-      transform: translate(-50%, -50%);
-      width: 100px;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    @media (max-width: 768px) {
-      .unown-image {
-        width: 80px;
-        left: 15%;
-      }
-    }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="banner.png" alt="PokéDaimon Logo">
+    <img src="banner.png" alt="PokéDaimon Banner" />
   </header>
 
   <div class="buttons-container">
-    <a href="#" class="btn-link">Sobre</a>
-    <a href="#" class="btn-link">Instagram</a>
-    <a href="#" class="btn-link">YouTube</a>
-    <a href="#" class="btn-link">Aventuras de Jogos</a>
-    <a href="#" class="btn-link">Contato</a>
-    <a href="#" class="btn-link">PokéConversa</a>
+    <a class="btn-link" href="#">Sobre</a>
+    <a class="btn-link" href="#">Instagram</a>
+    <a class="btn-link" href="#">YouTube</a>
+    <a class="btn-link" href="#">Aventuras de Jogos</a>
+    <a class="btn-link" href="#">Contato</a>
+    <a class="btn-link" href="#">PokéConversa</a>
   </div>
 
   <div class="disclaimer">
     <strong>Importante:</strong> A PokéDaimon é um projeto independente de fã, dedicado à celebração do universo Pokémon. Não possuímos, nem reivindicamos, direitos sobre qualquer imagem, nome, marca registrada ou conceito relacionado à franquia Pokémon. Todos os personagens, imagens e propriedades intelectuais mencionadas ou utilizadas neste site são de propriedade exclusiva de seus respectivos detentores.
   </div>
 
-  <footer>© 2025 PokéDaimon | Projeto Fã</footer>
+  <footer>
+    © 2025 PokéDaimon | Projeto Fã
+  </footer>
 
-  <img class="unown-image" src="unown.png" alt="Unown Background" />
 </body>
 </html>
