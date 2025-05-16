@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      background-color: #02b5bd;
+      background-color: #30CFCF;
       font-family: 'Arial', sans-serif;
       display: flex;
       flex-direction: column;
@@ -43,34 +43,35 @@
 
     .btn-link:hover {
       transform: scale(1.05);
-      color: #fff7e6;
+      color: #FFFFE6;
     }
 
     .disclaimer {
       background-color: #fff7e6;
-      border-radius: 1rem;
       padding: 1.5rem;
-      margin: 2rem;
-      max-width: 600px;
-      text-align: center;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 800px;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .disclaimer b {
+      font-weight: bold;
     }
 
     footer {
+      margin-bottom: 2rem;
       color: white;
       font-size: 0.9rem;
-      margin-bottom: 1rem;
     }
 
-    /* Unown background image (desktop only) */
     .unown-desktop {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
       width: 120px;
-      opacity: 0.06;
-      z-index: 0;
-      pointer-events: none;
-      user-select: none;
+      opacity: 0.2;
       display: none;
     }
 
@@ -83,13 +84,8 @@
 </head>
 <body>
 
-  <!-- Imagem decorativa dos Unown -->
-  <img src="banner.png" alt="Unown" class="unown-desktop" />
-
   <header>
-    <img src="logo.png" alt="PokéDaimon Logo" />
-    <img src="banner.png" alt="Gameboy Pokémon Green" />
-    <img src="unown-fnxl.png" alt="Pikachu" style="width: 150px; margin-top: -80px;" />
+    <img src="banner.png" alt="PokéDaimon Logo" />
   </header>
 
   <div class="buttons-container">
@@ -102,12 +98,15 @@
   </div>
 
   <div class="disclaimer">
-    <strong>Importante:</strong> A PokéDaimon é um projeto independente de fã, dedicado à celebração do universo Pokémon. Não possuímos, nem reivindicamos, direitos sobre qualquer imagem, nome, marca registrada ou conceito relacionado à franquia Pokémon. Todos os personagens, imagens e propriedades intelectuais mencionadas ou utilizadas neste site são de propriedade exclusiva de seus respectivos detentores.
+    <b>Importante:</b> A PokéDaimon é um projeto independente de fã, dedicado à celebração do universo Pokémon. Não possuímos, nem reivindicamos, direitos sobre qualquer imagem, nome, marca registrada ou conceito relacionado à franquia Pokémon. Todos os personagens, imagens e propriedades intelectuais mencionadas ou utilizadas neste site são de propriedade exclusiva de seus respectivos detentores.
   </div>
 
   <footer>
     © 2025 PokéDaimon | Projeto Fã
   </footer>
+
+  <!-- Unown Image (Desktop only) -->
+  <img src="unown.png" alt="Unown Letras" class="unown-desktop" />
 
 </body>
 </html>
