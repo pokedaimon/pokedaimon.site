@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PokéDaimon</title>
+  <title>Aventuras de Jogos - PokéDaimon</title>
   <style>
     body {
       background-color: #02b5bd;
@@ -25,19 +25,19 @@
     .buttons-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.6rem;
       justify-content: center;
-      margin: 2rem 1rem;
+      margin: 1.5rem 1rem;
     }
 
     .btn-link {
       background-color: #e0e0e0;
       color: black;
-      padding: 0.6rem 1.2rem;
-      border-radius: 12px;
+      padding: 0.4rem 1rem;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 0.9rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -47,39 +47,57 @@
       color: #fff7e6;
     }
 
-    .disclaimer {
-      background-color: #fff7e6;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin: 2rem;
+    .video-section {
       max-width: 600px;
+      width: 100%;
+      margin: 1rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-section video {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .video-title {
+      color: white;
       text-align: center;
+      font-size: 1.2rem;
+      margin-top: 0.8rem;
     }
 
     footer {
       color: white;
       font-size: 0.9rem;
-      margin-bottom: 1rem;
+      margin: 2rem 0 1rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="aventuras_de_jogos.png" alt="PokéDaimon Banner" />
+    <img src="aventura_de_jogos.png" alt="PokéDaimon Banner" />
   </header>
 
   <div class="buttons-container">
-    <a class="btn-link" href="#">Sobre</a>
+    <a class="btn-link" href="index.html">Home</a>
     <a class="btn-link" href="#">Instagram</a>
     <a class="btn-link" href="#">YouTube</a>
-    <a class="btn-link" href="#">Aventuras de Jogos</a>
     <a class="btn-link" href="#">Contato</a>
     <a class="btn-link" href="#">PokéConversa</a>
   </div>
 
-  <div class="disclaimer">
-    <strong>Importante:</strong> A PokéDaimon é um projeto independente de fã, dedicado à celebração do universo Pokémon. Não possuímos, nem reivindicamos, direitos sobre qualquer imagem, nome, marca registrada ou conceito relacionado à franquia Pokémon. Todos os personagens, imagens e propriedades intelectuais mencionadas ou utilizadas neste site são de propriedade exclusiva de seus respectivos detentores.
+  <div class="video-section">
+    <a href="materia1.html">
+      <video autoplay muted loop playsinline>
+        <source src="Capa_pixel_pokemon.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </a>
+    <div class="video-title">Matéria 1: Jornada Pixelada</div>
   </div>
 
   <footer>
