@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aventuras de Jogos - PokéDaimon</title>
+  <title>PokéDaimon</title>
   <style>
     body {
       background-color: #02b5bd;
@@ -15,63 +15,76 @@
       align-items: center;
     }
 
-    .banner {
+    header img {
       width: 100%;
       max-width: 900px;
-    }
-
-    .banner img {
-      width: 100%;
       height: auto;
-      display: block;
+      margin-top: 1rem;
     }
 
     .buttons-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 1rem;
+      justify-content: center;
       margin: 2rem 1rem;
     }
 
-    .btn-post {
-      background-color: #ffffff;
-      color: #000;
-      padding: 1rem 1.5rem;
+    .btn-link {
+      background-color: #e0e0e0;
+      color: black;
+      padding: 0.6rem 1.2rem;
       border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .btn-post:hover {
-      background-color: #ffcc00;
-      color: #000;
+    .btn-link:hover {
       transform: scale(1.05);
+      color: #fff7e6;
+    }
+
+    .disclaimer {
+      background-color: #fff7e6;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 2rem;
+      max-width: 600px;
+      text-align: center;
     }
 
     footer {
       color: white;
-      margin-bottom: 1rem;
       font-size: 0.9rem;
-      text-align: center;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
-  <div class="banner">
-    <img src="aventuras_de_jogos.png" alt="Banner Aventuras de Jogos">
-  </div>
+
+  <header>
+    <img src="aventura_de_jogos.png" alt="PokéDaimon Banner" />
+  </header>
 
   <div class="buttons-container">
-    <a href="aventura-1.html" class="btn-post">A Jornada Começa</a>
-    <a href="#" class="btn-post">Nova Aventura</a>
-    <a href="#" class="btn-post">Explorações Finais</a>
+    <a class="btn-link" href="#">Sobre</a>
+    <a class="btn-link" href="#">Instagram</a>
+    <a class="btn-link" href="#">YouTube</a>
+    <a class="btn-link" href="#">Aventuras de Jogos</a>
+    <a class="btn-link" href="#">Contato</a>
+    <a class="btn-link" href="#">PokéConversa</a>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Importante:</strong> A PokéDaimon é um projeto independente de fã, dedicado à celebração do universo Pokémon. Não possuímos, nem reivindicamos, direitos sobre qualquer imagem, nome, marca registrada ou conceito relacionado à franquia Pokémon. Todos os personagens, imagens e propriedades intelectuais mencionadas ou utilizadas neste site são de propriedade exclusiva de seus respectivos detentores.
   </div>
 
   <footer>
     © 2025 PokéDaimon | Projeto Fã
   </footer>
+
 </body>
 </html>
