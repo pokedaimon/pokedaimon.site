@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,124 +11,129 @@
       --cor-header: #0c878e;
       --cor-titulo: #ffc107;
       --cor-texto: #292929;
-    }* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background-image: url('fundo-textura.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top center;
-  color: var(--cor-texto);
-}
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-image: url('fundo-textura.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: top center;
+      color: var(--cor-texto);
+    }
 
-header {
-  background-color: var(--cor-header);
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+    header {
+      background-color: var(--cor-header);
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-.logo {
-  flex: 1;
-  text-align: center;
-}
+    .logo {
+      flex: 1;
+      text-align: center;
+    }
 
-.logo img {
-  height: 60px;
-}
+    .logo img {
+      height: 60px;
+    }
 
-.menu-toggle {
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
+    .menu-toggle {
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
 
-nav {
-  display: none;
-  flex-direction: column;
-  background-color: var(--cor-header);
-  position: absolute;
-  top: 70px;
-  right: 10px;
-  z-index: 10;
-  border-radius: 8px;
-}
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: var(--cor-header);
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      z-index: 10;
+      border-radius: 8px;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-nav.show {
-  display: flex;
-}
+    nav.show {
+      display: flex;
+    }
 
-.banner-video {
-  width: 100%;
-  max-height: 400px;
-  overflow: hidden;
-}
+    .banner-video {
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+    }
 
-.banner-video video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-bottom: 4px solid var(--cor-header);
-}
+    .banner-video video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 4px solid var(--cor-header);
+    }
 
-.materias {
-  max-width: 960px;
-  margin: auto;
-  padding: 2rem;
-}
+    .materias {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
 
-.materia {
-  background: white;
-  border-radius: 16px;
-  margin-bottom: 2rem;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
+    .materia {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
 
-.materia video {
-  width: 100%;
-  display: block;
-}
+    .materia video {
+      width: 100%;
+      display: block;
+    }
 
-.materia-content {
-  padding: 1rem 1.5rem;
-}
+    .materia-content {
+      padding: 1rem 1.5rem;
+    }
 
-.materia h2 {
-  color: var(--cor-header);
-  margin-bottom: 0.5rem;
-}
+    .materia h2 {
+      color: var(--cor-header);
+      margin-bottom: 0.5rem;
+    }
 
-.materia p {
-  margin-bottom: 0;
-}
+    .materia h2 a {
+      color: var(--cor-header);
+      text-decoration: none;
+    }
 
-footer {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #666;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  margin-top: 2rem;
-}
+    .materia p {
+      margin-bottom: 0;
+    }
 
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -143,21 +149,33 @@ footer {
       <a href="#">YouTube</a>
       <a href="#">Contato</a>
     </nav>
-  </header>  <div class="banner-video">
+  </header>
+
+  <div class="banner-video">
     <video autoplay muted loop playsinline>
       <source src="Aventuras de Jogos.mp4" type="video/mp4">
       Seu navegador não suporta vídeos.
     </video>
-  </div>  <section class="materias">
+  </div>
+
+  <section class="materias">
+
+    <!-- MATÉRIA 1 - COM LINK -->
     <div class="materia">
-      <video autoplay muted loop playsinline>
-        <source src="materia2-capa.mp4" type="video/mp4">
-      </video>
+      <a href="nascimento-do-pokemon-pixelado.html">
+        <video autoplay muted loop playsinline>
+          <source src="materia2-capa.mp4" type="video/mp4">
+        </video>
+      </a>
       <div class="materia-content">
-        <h2>A Jornada Pixelada</h2>
+        <h2>
+          <a href="nascimento-do-pokemon-pixelado.html">Nascimento do Pokemon Pixelado</a>
+        </h2>
         <p>Uma reflexão sobre os jogos clássicos de Pokémon nos pixels.</p>
       </div>
     </div>
+
+    <!-- MATÉRIA 2 -->
     <div class="materia">
       <video autoplay muted loop playsinline>
         <source src="materia1-capa.mp4" type="video/mp4">
@@ -167,9 +185,13 @@ footer {
         <p>Desvendamos os mistérios e a sensibilidade vibracional da região de Johto.</p>
       </div>
     </div>
-  </section>  <footer>
+
+  </section>
+
+  <footer>
     PokéDaimon &copy; 2025 – Projeto de fã independente.<br/>
     Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
   </footer>
+
 </body>
 </html>
