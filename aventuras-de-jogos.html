@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PokéDaimon – Matéria Completa</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --cor1: #f4faff;
@@ -23,66 +23,87 @@
       color: var(--cor2);
       line-height: 1.6;
     }
+
     header {
       background-color: var(--realce);
       padding: 1rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      font-family: 'Press Start 2P', cursive;
-      color: white;
-      font-size: 1rem;
+      gap: 1rem;
+      position: relative;
     }
+
+    header img {
+      height: 50px;
+      width: auto;
+    }
+
+    .header-title {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.5rem;
+      color: #ffdd00;
+      flex-grow: 1;
+    }
+
     .menu-toggle {
       font-size: 1.5rem;
       cursor: pointer;
-      display: block;
+      color: white;
     }
+
     nav {
       display: none;
       flex-direction: column;
       background-color: var(--realce);
       position: absolute;
-      top: 60px;
+      top: 70px;
       right: 10px;
       border-radius: 8px;
       overflow: hidden;
       z-index: 10;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       padding: 0.75rem 1rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
+
     nav a:last-child {
       border-bottom: none;
     }
+
     nav.show {
       display: flex;
     }
+
     .banner-video {
       width: 100%;
       max-height: 360px;
       overflow: hidden;
     }
+
     .banner-video video {
       width: 100%;
       height: auto;
       display: block;
       border-bottom: 4px solid var(--realce);
     }
+
     main {
       max-width: 880px;
       margin: auto;
       padding: 2rem;
     }
+
     article {
       background: white;
       padding: 2rem;
       border-radius: 16px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     }
+
     .capa-materia {
       width: 100%;
       margin: 1rem 0 2rem;
@@ -90,24 +111,29 @@
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
+
     .capa-materia video {
       width: 100%;
       height: auto;
       display: block;
       border-radius: 12px;
     }
+
     h1, h2, h3 {
       color: var(--cor3);
       margin-bottom: 1rem;
     }
+
     p {
       margin-bottom: 1.2rem;
     }
+
     .autor {
       font-size: 0.9rem;
       color: #666;
       margin-bottom: 2rem;
     }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -117,8 +143,10 @@
   </style>
 </head>
 <body>
+
   <header>
-    PokéDaimon
+    <img src="logo-pokedaimon.png" alt="Logo PokéDaimon">
+    <div class="header-title">Página Inicial</div>
     <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">☰</div>
     <nav>
       <a href="#">Início</a>
@@ -130,7 +158,7 @@
 
   <div class="banner-video">
     <video autoplay muted loop playsinline>
-      <source src="Aventura de jogos.mp4" type="video/mp4">
+      <source src="video-banner.mp4" type="video/mp4">
       Seu navegador não suporta vídeo.
     </video>
   </div>
@@ -140,7 +168,6 @@
       <h1>A Jornada Pixelada</h1>
       <p class="autor">por Felipe Hypolito Fagionato – 2025</p>
 
-      <!-- NOVO BLOCO DE VÍDEO CAPA DA MATÉRIA -->
       <div class="capa-materia">
         <video autoplay muted loop playsinline>
           <source src="capa-materia.mp4" type="video/mp4">
@@ -168,5 +195,6 @@
     Projeto PokéDaimon &copy; 2025 – Todos os direitos reservados<br>
     Este site é um tributo criativo e não possui afiliação oficial com Nintendo ou The Pokémon Company.
   </footer>
+
 </body>
 </html>
