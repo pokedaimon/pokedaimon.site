@@ -2,55 +2,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Jornada Pixelada</title>
+  <title>PokéDaimon – Jornada Pixelada</title>
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    :root {
+      --cor1: #f4faff;
+      --cor2: #292929;
+      --cor3: #0c878e;
+      --realce: #0c878e;
+    }
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f4faff;
-      color: #292929;
+      background-color: var(--cor1);
+      background-image: url('fundo-padrao.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: var(--cor2);
       line-height: 1.6;
-    }.container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-
-h1 {
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 2.5rem;
-  color: #0c878e;
-  margin-bottom: 1rem;
-}
-
-.autor {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 2rem;
-}
-
-p {
-  margin-bottom: 1.2rem;
-}
-
+    }
+    header {
+      background-color: var(--realce);
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    header img {
+      height: 50px;
+      width: auto;
+    }
+    .menu-toggle {
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+    }
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: var(--realce);
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      border-radius: 8px;
+      overflow: hidden;
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    nav a:last-child {
+      border-bottom: none;
+    }
+    nav.show {
+      display: flex;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: var(--cor3);
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
+    }
+    .video-banner, .imagem-extra {
+      width: 100%;
+      margin: 1.5rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .video-banner video, .imagem-extra img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: #999;
+      background: rgba(255, 255, 255, 0.8);
+      margin-top: 2rem;
+    }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>A Jornada Pixelada</h1>
-    <p class="autor">por Felipe Hypolito Fagionato – 2025</p><p>Quando o primeiro Game Boy da Nintendo chegou no final dos anos 80, foi realmente um tremendo sucesso! Os jogos passaram a caber na palma das mãos de cada treinador.</p>
+<body>  <header>
+    <img src="logo-pokedaimon.png" alt="Logo PokéDaimon">
+    <h1>PÁGINA INICIAL</h1>
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">☰</div>
+    <nav>
+      <a href="#">Entrevistas</a>
+      <a href="#">Aventuras de Jogos</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Contatos</a>
+    </nav>
+  </header>  <div class="video-banner">
+    <video autoplay muted loop playsinline>
+      <source src="banner-inicial.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+  </div>  <main>
+    <p>Quando o primeiro Game Boy da Nintendo chegou no final dos anos 80, foi realmente um tremendo sucesso! Os jogos passaram a caber na palma das mãos de cada treinador.</p><div class="imagem-extra">
+  <img src="imagem-intermediaria-1.png" alt="Imagem tema 1">
+</div>
 
 <p>E assim, entre pixels verdes e cinzentos, a jornada Pokémon começou — rasgando o véu da monotonia e iluminando a infância de milhões de treinadores.</p>
+
+<div class="imagem-extra">
+  <img src="imagem-intermediaria-2.png" alt="Imagem tema 2">
+</div>
 
 <p>Era um teatro de contrastes: uma dança entre o verde e o cinza que, no imaginário dos jogadores, se tornava um universo de cores vibrantes.</p>
 
 <p>Apesar de falarmos atualmente desse assunto com grande nostalgia, é incrível como a franquia de Pokémon foi capaz de deixar cada jogo uma característica única de aventuras, histórias e trocas de Pokémons que chegam até os dias atuais com um sentimento de alegria todas as vezes que jogamos.</p>
 
-  </div>
-</body>
+  </main>  <footer>
+    PokéDaimon © 2025 – Projeto de fã independente.<br>
+    Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
+  </footer></body>
 </html>
