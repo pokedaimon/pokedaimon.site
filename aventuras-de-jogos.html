@@ -48,28 +48,44 @@
       color: #fff7e6;
     }
 
-    .video-section {
-      max-width: 400px;
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      max-width: 1000px;
       width: 100%;
-      margin: 1rem auto;
+    }
+
+    .video-card {
+      max-width: 280px;
+      width: 100%;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       text-align: center;
+      background-color: #00a7ad;
+      transition: transform 0.3s ease;
     }
 
-    .video-section video {
+    .video-card:hover {
+      transform: scale(1.02);
+    }
+
+    .video-card video {
       width: 100%;
-      max-height: 220px;
+      aspect-ratio: 16/9;
       object-fit: cover;
-      border-radius: 12px;
       display: block;
+      border-radius: 12px 12px 0 0;
     }
 
     .video-title {
       color: white;
-      font-size: 1.1rem;
-      margin: 0.5rem 0 1rem;
+      font-size: 0.95rem;
+      font-weight: bold;
+      padding: 0.5rem;
     }
 
     footer {
@@ -93,14 +109,33 @@
     <a class="btn-link" href="#">PokéConversa</a>
   </div>
 
-  <div class="video-section">
-    <a href="materia1.html">
+  <div class="card-grid">
+    <!-- Card 1 -->
+    <a href="materia1.html" class="video-card">
       <video autoplay muted loop playsinline>
         <source src="Capa_pixel_pokemon.mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
       </video>
+      <div class="video-title">Matéria 1: Jornada Pixelada</div>
     </a>
-    <div class="video-title">Matéria 1: Jornada Pixelada</div>
+
+    <!-- Card 2 (exemplo com imagem ao invés de vídeo) -->
+    <a href="materia2.html" class="video-card">
+      <video autoplay muted loop playsinline>
+        <source src="Capa_exemplo_2.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+      <div class="video-title">Matéria 2: Explorando Johto</div>
+    </a>
+
+    <!-- Card 3 (pronto pra usar) -->
+    <a href="materia3.html" class="video-card">
+      <video autoplay muted loop playsinline>
+        <source src="Capa_exemplo_3.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+      <div class="video-title">Matéria 3: Os Mistérios de Kanto</div>
+    </a>
   </div>
 
   <footer>
