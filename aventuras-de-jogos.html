@@ -16,13 +16,19 @@
     }
 
     header img {
-      width: 100vw; /* ocupa toda a largura da tela */
-      max-width: 900px;
-      height: auto;
-      margin: 0;
-      display: block;
-      max-width: none; /* remove o limite de 900px */
-    }
+      header {
+  width: 100vw;
+  overflow: hidden;
+}
+
+header img {
+  width: 100vw;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
 
     .buttons-container {
       display: flex;
