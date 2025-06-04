@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jornada Pixelada</title>
+  <title>Jornada Pixelada – PokéDaimon</title>
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -21,142 +21,158 @@
       background-image: url('fundo-textura.jpg');
       background-size: cover;
       background-attachment: fixed;
-      background-position: center;
       color: var(--cor2);
       line-height: 1.6;
-    }
-    header {
-      background-color: var(--realce);
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      position: relative;
-      flex-wrap: wrap;
-    }
-    header img {
-      height: 50px;
-      width: auto;
-    }
-    .header-title-img {
-      flex-grow: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .header-title-img img {
-      height: 40px;
-      max-width: 100%;
-    }
-    .header-title-text {
-      color: yellow;
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 1.5rem;
-    }
-    .menu-toggle {
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: white;
-    }
-    nav {
-      display: none;
-      flex-direction: column;
-      background-color: var(--realce);
-      position: absolute;
-      top: 70px;
-      right: 10px;
-      border-radius: 8px;
-      overflow: hidden;
-      z-index: 10;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 0.75rem 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    nav a:last-child {
-      border-bottom: none;
-    }
-    nav.show {
-      display: flex;
-    }
-    .banner-video {
-      width: 100%;
-      max-height: 360px;
-      overflow: hidden;
-    }
-    .banner-video video {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-bottom: 4px solid var(--realce);
-    }
-    main {
-      max-width: 880px;
-      margin: auto;
-      padding: 2rem;
-    }
-    article {
-      background: white;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    }
-    article img {
-      width: 100%;
-      margin: 1rem 0;
-      border-radius: 12px;
-    }
-    h1, h2, h3 {
-      color: var(--cor3);
-      margin-bottom: 1rem;
-    }
-    p {
-      margin-bottom: 1.2rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.85rem;
-      color: #999;
-    }
+    }header {
+  background-color: var(--realce);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+header img {
+  height: 50px;
+  width: auto;
+}
+
+.header-title {
+  text-align: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.header-title h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.8rem;
+  color: #f8cf30;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background-color: var(--realce);
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav a:last-child {
+  border-bottom: none;
+}
+
+nav.show {
+  display: flex;
+}
+
+.capa-materia {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto 1rem;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.capa-materia img,
+.capa-materia video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+main {
+  max-width: 880px;
+  margin: auto;
+  padding: 2rem;
+}
+
+article {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+  color: var(--cor3);
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+.imagem-extra {
+  width: 100%;
+  max-width: 600px;
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: #999;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 3rem;
+}
+
   </style>
 </head>
 <body>  <header>
     <img src="logo-pokedaimon.png" alt="Logo PokéDaimon">
-    <div class="header-title-img">
-      <div class="header-title-text">Jornada Pixelada</div>
-    </div>
     <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">☰</div>
     <nav>
       <a href="#">Entrevistas</a>
       <a href="#">Aventuras de Jogos</a>
       <a href="#">Instagram</a>
       <a href="#">YouTube</a>
-      <a href="#">Contato</a>
+      <a href="#">Contatos</a>
     </nav>
-  </header>  <div class="banner-video">
-    <video autoplay muted loop playsinline>
-      <source src="materia2-capa.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
+    <div class="header-title">
+      <h1>JORNADA PIXELADA</h1>
+    </div>
+  </header>  <div class="capa-materia">
+    <img src="imagem-capa.jpg" alt="Imagem de Capa Jornada Pixelada">
   </div>  <main>
     <article>
-      <p>Quando o primeiro Game Boy da Nintendo chegou no final dos anos 80, foi realmente um tremendo sucesso! Os jogos passaram a caber na palma das mãos de cada treinador.</p><img src="imagem1.png" alt="Imagem Pokémon 1">
+      <p>Quando o primeiro Game Boy da Nintendo chegou no final dos anos 80, foi realmente um tremendo sucesso! Os jogos passaram a caber na palma das mãos de cada treinador.</p><img src="imagem1.jpg" alt="Imagem Pokémon 1" class="imagem-extra">
 
   <p>E assim, entre pixels verdes e cinzentos, a jornada Pokémon começou — rasgando o véu da monotonia e iluminando a infância de milhões de treinadores.</p>
 
-  <p>Era um teatro de contrastes: uma dança entre o verde e o cinza que, no imaginário dos jogadores, se tornava um universo de cores vibrantes.</p>
+  <img src="imagem2.jpg" alt="Imagem Pokémon 2" class="imagem-extra">
 
-  <img src="imagem2.png" alt="Imagem Pokémon 2">
+  <p>Era um teatro de contrastes: uma dança entre o verde e o cinza que, no imaginário dos jogadores, se tornava um universo de cores vibrantes.</p>
 
   <p>Apesar de falarmos atualmente desse assunto com grande nostalgia, é incrível como a franquia de Pokémon foi capaz de deixar cada jogo uma característica única de aventuras, histórias e trocas de Pokémons que chegam até os dias atuais com um sentimento de alegria todas as vezes que jogamos.</p>
 </article>
 
   </main>  <footer>
-    PokéDaimon © 2025 – Projeto de fã independente.<br>
-    Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
+    PokéDaimon © 2025 – Projeto de fã independente. Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
   </footer></body>
 </html>
