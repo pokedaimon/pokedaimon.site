@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PokéDaimon – Matéria Completa</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Jornada Pixelada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --cor1: #f4faff;
       --cor2: #292929;
-      --cor3: #ff0055;
-      --realce: #00c896;
+      --cor3: #0c878e;
+      --realce: #0c878e;
     }
     * {
       margin: 0;
@@ -19,7 +18,10 @@
     }
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: var(--cor1);
+      background-image: url('fundo-textura.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
       color: var(--cor2);
       line-height: 1.6;
     }
@@ -27,23 +29,42 @@
       background-color: var(--realce);
       padding: 1rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      font-family: 'Press Start 2P', cursive;
-      color: white;
-      font-size: 1rem;
+      justify-content: space-between;
+      gap: 1rem;
+      position: relative;
+      flex-wrap: wrap;
+    }
+    header img {
+      height: 50px;
+      width: auto;
+    }
+    .header-title-img {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header-title-img img {
+      height: 40px;
+      max-width: 100%;
+    }
+    .header-title-text {
+      color: yellow;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.5rem;
     }
     .menu-toggle {
       font-size: 1.5rem;
       cursor: pointer;
-      display: block;
+      color: white;
     }
     nav {
       display: none;
       flex-direction: column;
       background-color: var(--realce);
       position: absolute;
-      top: 60px;
+      top: 70px;
       right: 10px;
       border-radius: 8px;
       overflow: hidden;
@@ -83,17 +104,9 @@
       border-radius: 16px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     }
-    .capa-materia {
+    article img {
       width: 100%;
-      margin: 1rem 0 2rem;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .capa-materia video {
-      width: 100%;
-      height: auto;
-      display: block;
+      margin: 1rem 0;
       border-radius: 12px;
     }
     h1, h2, h3 {
@@ -103,11 +116,6 @@
     p {
       margin-bottom: 1.2rem;
     }
-    .autor {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 2rem;
-    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -116,57 +124,39 @@
     }
   </style>
 </head>
-<body>
-  <header>
-    PokéDaimon
+<body>  <header>
+    <img src="logo-pokedaimon.png" alt="Logo PokéDaimon">
+    <div class="header-title-img">
+      <div class="header-title-text">Jornada Pixelada</div>
+    </div>
     <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">☰</div>
     <nav>
-      <a href="#">Início</a>
-      <a href="#">Matérias</a>
-      <a href="#">Galeria</a>
-      <a href="#">Sobre</a>
+      <a href="#">Entrevistas</a>
+      <a href="#">Aventuras de Jogos</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Contato</a>
     </nav>
-  </header>
-
-  <div class="banner-video">
+  </header>  <div class="banner-video">
     <video autoplay muted loop playsinline>
-      <source src="video-banner.mp4" type="video/mp4">
+      <source src="capa-jornada.mp4" type="video/mp4">
       Seu navegador não suporta vídeo.
     </video>
-  </div>
-
-  <main>
+  </div>  <main>
     <article>
-      <h1>A Jornada Pixelada</h1>
-      <p class="autor">por Felipe Hypolito Fagionato – 2025</p>
+      <p>Quando o primeiro Game Boy da Nintendo chegou no final dos anos 80, foi realmente um tremendo sucesso! Os jogos passaram a caber na palma das mãos de cada treinador.</p><img src="imagem1.png" alt="Imagem Pokémon 1">
 
-      <!-- NOVO BLOCO DE VÍDEO CAPA DA MATÉRIA -->
-      <div class="capa-materia">
-        <video autoplay muted loop playsinline>
-          <source src="capa-materia.mp4" type="video/mp4">
-          Seu navegador não suporta vídeo.
-        </video>
-      </div>
+  <p>E assim, entre pixels verdes e cinzentos, a jornada Pokémon começou — rasgando o véu da monotonia e iluminando a infância de milhões de treinadores.</p>
 
-      <p>Desde os tempos do Game Boy monocromático até os mundos expansivos do Nintendo Switch, a franquia Pokémon evoluiu sem perder sua alma. Nesta matéria, vamos explorar essa transição, comparando os estilos visuais, trilhas sonoras, mecânicas e o impacto emocional dessa transformação.</p>
+  <p>Era um teatro de contrastes: uma dança entre o verde e o cinza que, no imaginário dos jogadores, se tornava um universo de cores vibrantes.</p>
 
-      <h2>1. A Magia do Pixel</h2>
-      <p>Os jogos clássicos como Pokémon Red, Blue e Yellow usavam gráficos limitados, mas cada sprite carregava uma identidade única. Os pixels vibravam com alma, e a imaginação preenchia as lacunas.</p>
+  <img src="imagem2.png" alt="Imagem Pokémon 2">
 
-      <h2>2. Do 2D ao 3D</h2>
-      <p>Com o tempo, Pokémon saltou para o 3D com Pokémon X/Y e posteriormente Sword/Shield. O mundo ganhou volume, os Pokémon se tornaram mais expressivos, mas muitos fãs sentem falta da estética original.</p>
+  <p>Apesar de falarmos atualmente desse assunto com grande nostalgia, é incrível como a franquia de Pokémon foi capaz de deixar cada jogo uma característica única de aventuras, histórias e trocas de Pokémons que chegam até os dias atuais com um sentimento de alegria todas as vezes que jogamos.</p>
+</article>
 
-      <h2>3. O Elemento Espiritual</h2>
-      <p>A beleza de Pokémon está não apenas nos gráficos, mas na vibração emocional que ele desperta. Cada geração traz uma nova maneira de sentir — e isso é o que torna a franquia eterna.</p>
-
-      <h3>Reflexão Final</h3>
-      <p>Não é sobre qual é melhor, mas sobre como cada fase representa um tempo, uma geração, uma vibração única. Pokémon é uma ponte entre mundos, e sua verdadeira beleza está na memória.</p>
-    </article>
-  </main>
-
-  <footer>
-    Projeto PokéDaimon &copy; 2025 – Todos os direitos reservados<br>
-    Este site é um tributo criativo e não possui afiliação oficial com Nintendo ou The Pokémon Company.
-  </footer>
-</body>
+  </main>  <footer>
+    PokéDaimon © 2025 – Projeto de fã independente.<br>
+    Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
+  </footer></body>
 </html>
