@@ -79,19 +79,20 @@
 
     .banner-video {
       width: 100%;
-      min-height: 300px;
-      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
       position: relative;
       z-index: 1;
-      margin-bottom: 2rem;
     }
 
     .banner-video video {
-      width: 100%;
+      width: 80%;
       height: auto;
       display: block;
       object-fit: cover;
       border-bottom: 4px solid var(--cor-header);
+      border-radius: 16px;
     }
 
     .materias {
@@ -146,7 +147,6 @@
       margin-top: 2rem;
     }
 
-    /* Responsivo para Desktop */
     @media (min-width: 1024px) {
       .materias {
         display: grid;
@@ -179,6 +179,10 @@
       .logo {
         text-align: left;
       }
+
+      .banner-video video {
+        width: 60%;
+      }
     }
   </style>
 </head>
@@ -206,7 +210,7 @@
 
   <section class="materias">
 
-    <!-- MATÉRIA 1 - COM LINK -->
+    <!-- MATÉRIA 1 -->
     <div class="materia">
       <a href="nascimento-do-pokemon-pixelado.html">
         <video autoplay muted loop playsinline>
