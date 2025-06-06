@@ -93,8 +93,8 @@
       max-width: 1200px;
       margin: auto;
       padding: 2rem 1rem;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 2rem;
     }
 
@@ -167,17 +167,68 @@
       }
 
       .materias {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      .materia {
-        width: 48%;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (min-width: 1024px) {
-      .materia {
-        width: 31%;
+      .materias {
+        grid-template-columns: repeat(3, 1fr);
       }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo-pokedaimon.png" alt="Logo PokéDaimon" />
+    </div>
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">☰</div>
+    <nav>
+      <a href="#">Entrevistas</a>
+      <a href="#">Aventuras de Jogos</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <div class="banner-video">
+    <video autoplay muted loop playsinline>
+      <source src="Aventuras de Jogos.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos.
+    </video>
+  </div>
+
+  <section class="materias">
+    <div class="materia">
+      <a href="nascimento-do-pokemon-pixelado.html">
+        <video autoplay muted loop playsinline>
+          <source src="materia2-capa.mp4" type="video/mp4">
+        </video>
+      </a>
+      <div class="materia-content">
+        <h2>
+          <a href="nascimento-do-pokemon-pixelado.html">Nascimento do Pokemon Pixelado</a>
+        </h2>
+        <p>Uma reflexão sobre os jogos clássicos de Pokémon nos pixels.</p>
+      </div>
+    </div>
+
+    <div class="materia">
+      <video autoplay muted loop playsinline>
+        <source src="materia1-capa.mp4" type="video/mp4">
+      </video>
+      <div class="materia-content">
+        <h2>Explorando Johto</h2>
+        <p>Desvendamos os mistérios e a sensibilidade vibracional da região de Johto.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    PokéDaimon &copy; 2025 – Projeto de fã independente.<br/>
+    Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
+  </footer>
+</body>
+</html>
