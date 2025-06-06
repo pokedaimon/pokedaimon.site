@@ -82,20 +82,21 @@
       overflow: hidden;
     }
 
-    .banner-video video {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-bottom: 4px solid var(--cor-header);
-    }
+    .banner-video {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  margin-bottom: 2rem; /* Novo espaçamento abaixo do banner */
+}
 
-    .materias {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem 1rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
+.materias {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 2rem; /* Amplo respiro lateral */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
     }
 
     .materia {
