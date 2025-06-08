@@ -1,164 +1,63 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PokéDaimon – Página Inicial</title>
+  <title>Aventura de Jogos – PokéDaimon</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <style>
-    :root {
-      --cor-fundo: #f4faff;
-      --cor-header: #0c878e;
-      --cor-titulo: #ffc107;
-      --cor-texto: #292929;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Roboto', sans-serif;
-      background-image: url('fundo-textura.jpg');
+      background-image: url('fundo-textura2.jpg');
       background-size: cover;
       background-attachment: fixed;
       background-position: top center;
-      color: var(--cor-texto);
+      color: #292929;
+      font-family: 'Roboto', sans-serif;
     }
-
     header {
-      background-color: var(--cor-header);
+      background-color: #c1ff72;
       padding: 1rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
+      width: 100%;
     }
-
     .logo {
-      flex: 1;
       text-align: center;
     }
-
     .logo img {
       height: 60px;
     }
-
     .menu-toggle {
       font-size: 2rem;
-      color: white;
+      color: black;
       cursor: pointer;
       position: absolute;
       top: 1rem;
       right: 1rem;
     }
-
     nav {
       display: none;
       flex-direction: column;
-      background-color: var(--cor-header);
+      background-color: #c1ff72;
       position: absolute;
       top: 70px;
       right: 10px;
       z-index: 10;
       border-radius: 8px;
     }
-
     nav a {
-      color: white;
+      color: black;
       text-decoration: none;
       padding: 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
-
     nav.show {
       display: flex;
     }
-
-    .banner-video {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .banner-video video {
-      width: 80%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      border-bottom: 4px solid var(--cor-header);
-      border-radius: 16px;
-    }
-
-    .materias {
-      background: white;
-      padding: 2rem;
-      margin: 2rem auto;
-      width: 90%;
-      max-width: 1000px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      position: relative;
-      z-index: 2;
-    }
-
-    .materia {
-      background: white;
-      border-radius: 16px;
-      margin-bottom: 2rem;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    }
-
-    .materia video {
-      width: 100%;
-      display: block;
-    }
-
-    .materia-content {
-      padding: 1rem 1.5rem;
-    }
-
-    .materia h2 {
-      color: var(--cor-header);
-      margin-bottom: 0.5rem;
-    }
-
-    .materia h2 a {
-      color: var(--cor-header);
-      text-decoration: none;
-    }
-
-    .materia p {
-      margin-bottom: 0;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #666;
-      padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.8);
-      margin-top: 2rem;
-    }
-
     @media (min-width: 1024px) {
-      .materias {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        padding: 3rem;
-      }
-
-      .materia {
-        margin-bottom: 0;
-      }
-
       nav {
         display: flex !important;
         position: static;
@@ -167,80 +66,103 @@
         background: none;
         border-radius: 0;
       }
-
       .menu-toggle {
         display: none;
       }
-
       header {
         flex-wrap: nowrap;
       }
-
-      .logo {
-        text-align: left;
-      }
-
-      .banner-video video {
-        width: 60%;
-      }
+    }
+    .materias {
+      background: white;
+      padding: 2rem;
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 1000px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .materia-card {
+      background: #fff8ee;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .materia-card h4 {
+      margin-bottom: 0.5rem;
+      color: #a514fe;
+    }
+    .materia-card p {
+      margin-bottom: 0.5rem;
+    }
+    .materia-card small {
+      display: block;
+      color: #999;
+      margin-bottom: 0.5rem;
+    }
+    .materia-card a {
+      color: #ff6600;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="logo-pokedaimon.png" alt="Logo PokéDaimon" />
+      <img src="logo-pokedaimon-roxo.png" alt="Logo PokéDaimon" />
     </div>
     <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">☰</div>
     <nav>
       <a href="#">Entrevistas</a>
-      <a href="#">Aventuras de Jogos</a>
+      <a href="#" class="active">Aventuras de Jogos</a>
       <a href="#">Instagram</a>
       <a href="#">YouTube</a>
       <a href="#">Contato</a>
     </nav>
-  </header>
-
-  <div class="banner-video">
-    <video autoplay muted loop playsinline>
-      <source src="banner_pokedaimon_inicial.mp4" type="video/mp4">
-      Seu navegador não suporta vídeos.
-    </video>
-  </div>
-
-  <section class="materias">
-
-    <!-- MATÉRIA 1 -->
-    <div class="materia">
-      <a href="nascimento-do-pokemon-pixelado.html">
-        <video autoplay muted loop playsinline>
-          <source src="materia2-capa.mp4" type="video/mp4">
-        </video>
-      </a>
-      <div class="materia-content">
-        <h2>
-          <a href="nascimento-do-pokemon-pixelado.html">Nascimento do Pokemon Pixelado</a>
-        </h2>
-        <p>Uma reflexão sobre os jogos clássicos de Pokémon nos pixels.</p>
-      </div>
-    </div>
-
-    <!-- MATÉRIA 2 -->
-    <div class="materia">
-      <video autoplay muted loop playsinline>
-        <source src="materia1-capa.mp4" type="video/mp4">
-      </video>
-      <div class="materia-content">
-        <h2>Explorando Johto</h2>
-        <p>Desvendamos os mistérios e a sensibilidade vibracional da região de Johto.</p>
-      </div>
-    </div>
-
-  </section>
-
-  <footer>
+  </header>  <section class="titulo-aventura" style="text-align: center; margin: 2rem 0;">
+    <h1 style="font-family: 'Luckiest Guy', cursive; font-size: 3rem; color: #ffa500;">Aventuras de Jogos</h1>
+    <p>Vivências, batalhas e jornadas espirituais no mundo Pokémon</p>
+  </section>  <section class="materias" id="aventura-list">
+    <!-- Conteúdo dinâmico carregado via aventuras.js -->
+  </section>  <footer>
     PokéDaimon &copy; 2025 – Projeto de fã independente.<br/>
     Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
-  </footer>
-</body>
+  </footer>  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const aventuras = [
+        {
+          "titulo": "Eirunys desperta em Galar",
+          "descricao": "O Abra capturado com furtividade no Let's Go inicia sua jornada consciente em Pokémon Shield.",
+          "data": "08/06/2025",
+          "link": "eirunys-em-galar.html"
+        },
+        {
+          "titulo": "Zyron e o fogo do começo",
+          "descricao": "Scorbunny escolhido como símbolo do despertar espiritual e o início da espiral com Zyron.",
+          "data": "08/06/2025",
+          "link": "zyron-inicio.html"
+        },
+        {
+          "titulo": "O Encontro com o Zamazenta",
+          "descricao": "Primeira visão do lobo lendário na névoa sagrada — um chamado da ancestralidade.",
+          "data": "08/06/2025",
+          "link": "zamazenta-nevoa.html"
+        }
+      ];
+
+      const container = document.getElementById("aventura-list");
+      aventuras.forEach(aventura => {
+        const card = document.createElement("div");
+        card.className = "materia-card";
+        card.innerHTML = `
+          <h4>${aventura.titulo}</h4>
+          <p>${aventura.descricao}</p>
+          <small>${aventura.data}</small>
+          <a href="${aventura.link}">Ler mais</a>
+        `;
+        container.appendChild(card);
+      });
+    });
+  </script></body>
 </html>
