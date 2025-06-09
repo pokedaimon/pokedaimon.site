@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aventuras de Jogos – PokéDaimon</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script src="materias.js"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-image: url('fundo-textura2.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #292929;
+      margin: 0;
+    }
+    header {
+      background-color: #c1ff72;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo img {
+      height: 60px;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #000;
+    }
+    .titulo-secao {
+      background-color: #e6ccff;
+      text-align: center;
+      margin: 2rem auto 1rem auto;
+      width: fit-content;
+      padding: 1rem 2rem;
+      border-radius: 16px;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2.5rem;
+      color: ##da4900;
+    }
+    .materias {
+      width: 80%;
+      max-width: 60%;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    @media (max-width: 768px) {
+      .materias {
+        max-width: 80%;
+      }
+    }
+    .materia {
+      margin-bottom: 2rem;
+    }
+    .materia h2 {
+      color: #a514fe;
+    }
+    .materia a {
+      color: #ff6600;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo-pokedaimon-roxo.png" alt="Logo PokéDaimon">
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="entrevistas.html">Entrevistas</a>
+    </nav>
+  </header>  <div class="titulo-secao">Aventuras de Jogos</div>  <section class="materias" id="materias-aventuras"></section>  <footer>
+    PokéDaimon &copy; 2025 – Projeto de fã independente.<br/>
+    Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
+  </footer>  <script>
+    const container = document.getElementById("materias-aventuras");
+    const aventuras = materias.filter(m => m.categoria === "aventuras");
+    aventuras.forEach(m => {
+      container.innerHTML += `
+        <div class="materia">
+          <h2>${m.titulo}</h2>
+          <p>${m.descricao}</p>
+          <small>${m.data}</small><br>
+          <a href="${m.link}">Ler mais</a>
+        </div>
+      `;
+    });
+  </script></body>
+</html>
