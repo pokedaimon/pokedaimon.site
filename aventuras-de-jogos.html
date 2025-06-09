@@ -1,188 +1,99 @@
 <!DOCTYPE html><html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aventura de Jogos – PokéDaimon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aventuras de Jogos – PokéDaimon</title>
   <link rel="icon" type="image/png" href="favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <script src="materias.js"></script>
   <style>
     body {
+      font-family: 'Roboto', sans-serif;
       background-image: url('fundo-textura2.jpg');
       background-size: cover;
       background-attachment: fixed;
-      background-position: top center;
       color: #292929;
-      font-family: 'Roboto', sans-serif;
       margin: 0;
     }
-
     header {
       background-color: #c1ff72;
       padding: 1rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      width: 100%;
+      align-items: center;
     }
-
     .logo img {
       height: 60px;
     }
-
-    .menu-toggle {
-      font-size: 2rem;
-      color: black;
-      cursor: pointer;
-    }
-
-    nav {
-      display: none;
-      flex-direction: column;
-      background-color: #c1ff72;
-      position: absolute;
-      top: 70px;
-      right: 10px;
-      z-index: 10;
-      border-radius: 8px;
-    }
-
     nav a {
-      color: black;
+      margin: 0 1rem;
       text-decoration: none;
-      padding: 1rem;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      color: #000;
     }
-
-    nav.show {
-      display: flex;
+    .titulo-aventura {
+      text-align: center;
+      margin-top: 2rem;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2.5rem;
+      color: #ffa500;
     }
-
-    @media (min-width: 1024px) {
-      nav {
-        display: flex !important;
-        position: static;
-        flex-direction: row;
-        justify-content: flex-end;
-        background: none;
-        border-radius: 0;
-      }
-      .menu-toggle {
-        display: none;
-      }
-    }
-
     .materias {
-      background: white;
-      padding: 2rem;
+      width: 80%;
+      max-width: 60%;
       margin: 2rem auto;
-      width: 90%;
-      max-width: 700px;
+      background: white;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
     }
-
     @media (max-width: 768px) {
       .materias {
-        width: 90%;
-        max-width: 90%;
+        max-width: 80%;
       }
     }
-
-    .materia-card {
-      background: #fff8ee;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    .materia {
+      margin-bottom: 2rem;
     }
-
-    .materia-card h4 {
-      margin-bottom: 0.5rem;
+    .materia h2 {
       color: #a514fe;
     }
-
-    .materia-card p {
-      margin-bottom: 0.5rem;
-    }
-
-    .materia-card small {
-      display: block;
-      color: #999;
-      margin-bottom: 0.5rem;
-    }
-
-    .materia-card a {
+    .materia a {
       color: #ff6600;
       text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="logo-pokedaimon-roxo.png" alt="Logo PokéDaimon" />
+      <img src="logo-pokedaimon-roxo.png" alt="Logo PokéDaimon">
     </div>
-    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">☰</div>
     <nav>
-      <a href="#">Entrevistas</a>
-      <a href="#" class="active">Aventuras de Jogos</a>
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
-      <a href="#">Contato</a>
+      <a href="index.html">Início</a>
+      <a href="entrevistas.html">Entrevistas</a>
     </nav>
-  </header>
-
-  <section class="titulo-aventura" style="text-align: center; margin: 2rem 0;">
-    <h1 style="font-family: 'Luckiest Guy', cursive; font-size: 3rem; color: #ffa500;">Aventuras de Jogos</h1>
-    <p>Vivências, batalhas e jornadas espirituais no mundo Pokémon</p>
-  </section>
-
-  <section class="materias" id="aventura-list">
-    <!-- Conteúdo dinâmico carregado via aventuras.js -->
-  </section>
-
-  <footer>
+  </header>  <div class="titulo-aventura">Aventuras de Jogos</div>  <section class="materias" id="materias-aventuras"></section>  <footer>
     PokéDaimon &copy; 2025 – Projeto de fã independente.<br/>
     Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
-  </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const aventuras = [
-        {
-          "titulo": "Eirunys desperta em Galar",
-          "descricao": "O Abra capturado com furtividade no Let's Go inicia sua jornada consciente em Pokémon Shield.",
-          "data": "08/06/2025",
-          "link": "eirunys-em-galar.html"
-        },
-        {
-          "titulo": "Zyron e o fogo do começo",
-          "descricao": "Scorbunny escolhido como símbolo do despertar espiritual e o início da espiral com Zyron.",
-          "data": "08/06/2025",
-          "link": "zyron-inicio.html"
-        },
-        {
-          "titulo": "O Encontro com o Zamazenta",
-          "descricao": "Primeira visão do lobo lendário na névoa sagrada — um chamado da ancestralidade.",
-          "data": "08/06/2025",
-          "link": "zamazenta-nevoa.html"
-        }
-      ];
-
-      const container = document.getElementById("aventura-list");
-      aventuras.forEach(aventura => {
-        const card = document.createElement("div");
-        card.className = "materia-card";
-        card.innerHTML = `
-          <h4>${aventura.titulo}</h4>
-          <p>${aventura.descricao}</p>
-          <small>${aventura.data}</small>
-          <a href="${aventura.link}">Ler mais</a>
-        `;
-        container.appendChild(card);
-      });
+  </footer>  <script>
+    const container = document.getElementById("materias-aventuras");
+    const aventuras = materias.filter(m => m.categoria === "aventuras");
+    aventuras.forEach(m => {
+      container.innerHTML += `
+        <div class="materia">
+          <h2>${m.titulo}</h2>
+          <p>${m.descricao}</p>
+          <small>${m.data}</small><br>
+          <a href="${m.link}">Ler mais</a>
+        </div>
+      `;
     });
-  </script>
-</body>
+  </script></body>
 </html>
