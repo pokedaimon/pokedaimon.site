@@ -64,6 +64,11 @@
       color: #ff6600;
       text-decoration: none;
     }
+    .materia img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
     footer {
       text-align: center;
       font-size: 0.85rem;
@@ -83,15 +88,20 @@
       <a href="index.html">Início</a>
       <a href="entrevistas.html">Entrevistas</a>
     </nav>
-  </header>  <div class="titulo-secao">Aventuras de Jogos</div>  <section class="materias" id="materias-aventuras"></section>  <footer>
+  </header>
+  <div class="titulo-secao">Aventuras de Jogos</div>
+  <section class="materias" id="materias-aventuras"></section>
+  <footer>
     PokéDaimon &copy; 2025 – Projeto de fã independente.<br/>
     Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
-  </footer>  <script>
+  </footer>
+  <script>
     const container = document.getElementById("materias-aventuras");
     const aventuras = materias.filter(m => m.categoria === "aventuras");
     aventuras.forEach(m => {
       container.innerHTML += `
         <div class="materia">
+          <img src="${m.capa}" alt="Capa da matéria">
           <h2>${m.titulo}</h2>
           <p>${m.descricao}</p>
           <small>${m.data}</small><br>
@@ -99,5 +109,6 @@
         </div>
       `;
     });
-  </script></body>
+  </script>
+</body>
 </html>
