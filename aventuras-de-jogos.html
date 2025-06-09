@@ -77,8 +77,8 @@
       background: white;
       padding: 2rem;
       margin: 2rem auto;
-      width: 90%;
-      max-width: 1000px;
+      width: 100%;
+      max-width: 700px;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
@@ -120,15 +120,23 @@
       <a href="#">YouTube</a>
       <a href="#">Contato</a>
     </nav>
-  </header>  <section class="titulo-aventura" style="text-align: center; margin: 2rem 0;">
+  </header>
+
+  <section class="titulo-aventura" style="text-align: center; margin: 2rem 0;">
     <h1 style="font-family: 'Luckiest Guy', cursive; font-size: 3rem; color: #ffa500;">Aventuras de Jogos</h1>
     <p>Vivências, batalhas e jornadas espirituais no mundo Pokémon</p>
-  </section>  <section class="materias" id="aventura-list">
+  </section>
+
+  <section class="materias" id="aventura-list">
     <!-- Conteúdo dinâmico carregado via aventuras.js -->
-  </section>  <footer>
+  </section>
+
+  <footer>
     PokéDaimon &copy; 2025 – Projeto de fã independente.<br/>
     Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
-  </footer>  <script>
+  </footer>
+
+  <script>
     document.addEventListener("DOMContentLoaded", () => {
       const aventuras = [
         {
@@ -164,5 +172,6 @@
         container.appendChild(card);
       });
     });
-  </script></body>
+  </script>
+</body>
 </html>
