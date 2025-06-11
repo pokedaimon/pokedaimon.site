@@ -2,7 +2,7 @@ const materias = [
   {
     id: "dynamax",
     titulo: "Origem do Dynamax",
-    video: "banner_pokedaemon_inicial.mp4",
+    video: "Capa_Dynamax_.webm",
     link: "materia1.html"
   },
   {
