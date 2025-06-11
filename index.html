@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -204,42 +205,38 @@
 
   <div class="banner-video">
     <video autoplay muted loop playsinline>
-      <source src="banner_pokedaimon_inicial.mp4" type="video/mp4">
+      <source src="banner_pokedaemon_inicial.mp4" type="video/mp4">
       Seu navegador não suporta vídeos.
     </video>
   </div>
 
-  <section class="materias">
-    <!-- MATÉRIA 1 -->
-    <div class="materia">
-      <a href="nascimento-do-pokemon-pixelado.html">
-        <video autoplay muted loop playsinline>
-          <source src="materia2-capa.mp4" type="video/mp4">
-        </video>
-      </a>
-      <div class="materia-content">
-        <h2>
-          <a href="nascimento-do-pokemon-pixelado.html">Nascimento do Pokémon Pixelado</a>
-        </h2>
-        <p>Uma reflexão sobre os jogos clássicos de Pokémon nos pixels.</p>
-      </div>
-    </div>
-
-    <!-- MATÉRIA 2 -->
-    <div class="materia">
-      <video autoplay muted loop playsinline>
-        <source src="m.mp4" type="video/mp4">
-      </video>
-      <div class="materia-content">
-        <h2>Material em andamento</h2>
-        <p>PokéDaimon próxima matéria.</p>
-      </div>
-    </div>
+  <section class="materias" id="materias-dinamicas">
+    <!-- Conteúdo das matérias será inserido via JavaScript -->
   </section>
 
   <footer>
     PokéDaimon &copy; 2025 – Projeto de fã independente.<br/>
     Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
   </footer>
+
+  <script src="materiais.js"></script>
+  <script>
+    const container = document.getElementById("materias-dinamicas");
+
+    materias.slice(0, 3).forEach(materia => {
+      const card = document.createElement("div");
+      card.className = "materia";
+      card.innerHTML = `
+        <a href="${materia.link}">
+          <video src="${materia.video}" autoplay muted loop playsinline></video>
+        </a>
+        <div class="materia-content">
+          <h2><a href="${materia.link}">${materia.titulo}</a></h2>
+          <p>Nova matéria em destaque da PokéDaimon.</p>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
 </body>
 </html>
