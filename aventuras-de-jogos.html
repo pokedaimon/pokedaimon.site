@@ -3,169 +3,239 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PokÃ©Daimon â€“ Aventuras de Jogos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokéDaimon – Aventuras de Jogos</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    :root {
+      --cor-fundo: #f4faff;
+      --cor-header: #c1ff72;
+      --cor-titulo: #ffc107;
+      --cor-texto: #292929;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-image: url('fundo-textura.jpg');
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-image: url('fundo-textura2.jpg');
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #ffffff;
+      background-attachment: fixed;
+      background-position: top center;
+      color: var(--cor-texto);
+    }
+
+    header {
+      background-color: var(--cor-header);
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      flex: 1;
       text-align: center;
     }
-    header {
-      background-color: #c2ff5b;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header img {
+
+    .logo img {
       height: 60px;
     }
-    nav {
-      position: relative;
-    }
+
     .menu-toggle {
+      font-size: 2rem;
+      color: black;
+      cursor: pointer;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    nav {
       display: none;
       flex-direction: column;
-      cursor: pointer;
+      background-color: var(--cor-header);
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      z-index: 10;
+      border-radius: 8px;
     }
-    .bar {
-      width: 25px;
-      height: 3px;
-      background-color: #000;
-      margin: 4px;
-    }
-    .menu {
-      display: flex;
-      gap: 1rem;
-    }
-    .menu a {
-      color: #000;
+
+    nav a {
+      color: black;
       text-decoration: none;
-      font-weight: bold;
+      padding: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
 
-    @media (max-width: 768px) {
-      .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #c2ff5b;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        text-align: right;
-        padding: 1rem;
-        border-radius: 0 0 0 10px;
-      }
-      .menu a {
-        margin-bottom: 1rem;
-      }
-      .menu-toggle {
-        display: flex;
-      }
-      .menu.open {
-        display: flex;
-      }
-    }
-
-    h1 {
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 2.5rem;
-      color: #a514fe;
-      margin-top: 2rem;
-      text-shadow: 2px 2px 4px #000;
-    }
-
-    #banners {
+    nav.show {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-      padding: 1rem;
     }
 
-    .materia-card {
-      width: 300px;
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 1rem;
-      padding: 1rem;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    }
-
-    .materia-card video {
+    .banner-video {
       width: 100%;
-      border-radius: 0.75rem;
-      transition: transform 0.3s ease;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
     }
 
-    .materia-card video:hover {
-      transform: scale(1.05);
+    .banner-video video {
+      width: 80%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-bottom: 4px solid var(--cor-header);
+      border-radius: 16px;
     }
 
-    .materia-card p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-      color: #ffccff;
-      font-weight: bold;
+    .materias {
+      background: white;
+      padding: 2rem;
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 1000px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    .materia {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .materia video {
+      width: 100%;
+      display: block;
+    }
+
+    .materia-content {
+      padding: 1rem 1.5rem;
+    }
+
+    .materia h2 {
+      color: #a514fe;
+      margin-bottom: 0.5rem;
+    }
+
+    .materia h2 a {
+      color: #a514fe;
+      text-decoration: none;
+    }
+
+    .materia p {
+      margin-bottom: 0;
     }
 
     footer {
-      margin-top: 4rem;
+      text-align: center;
       font-size: 0.85rem;
-      color: #cccccc;
-      padding: 2rem 1rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      color: #666;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .materias {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 3rem;
+      }
+
+      .materia {
+        margin-bottom: 0;
+      }
+
+      nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        justify-content: flex-end;
+        background: none;
+        border-radius: 0;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      header {
+        flex-wrap: nowrap;
+      }
+
+      .logo {
+        text-align: left;
+      }
+
+      .banner-video video {
+        width: 60%;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="logo-pokedaimon.png" alt="Logo PokÃ©Daimon">
+    <div class="logo">
+      <img src="logo-pokedaimon-roxo.png" alt="Logo PokéDaimon" />
+    </div>
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">☰</div>
     <nav>
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-      <div class="menu" id="nav-menu">
-        <a href="entrevistas.html">Entrevistas</a>
-        <a href="aventuras-de-jogos.html">Aventuras de Jogos</a>
-        <a href="https://www.instagram.com">Instagram</a>
-        <a href="https://www.youtube.com">YouTube</a>
-        <a href="contato.html">Contato</a>
-      </div>
+      <a href="https://www.pokedaimon.com.br/entrevistas.html">Entrevistas</a>
+            <a href="https://www.instagram.com/pokedaimon?igsh=bm8zaW44aWdzNTFy" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@pokedaimon.oficial?si=g9vELMqpD_QdLQ5U" target="_blank">YouTube</a>
+      <a href="https://wa.me/message/TPPLB4QVQKS6M1" target="_blank">Contato</a>
     </nav>
   </header>
 
-  <h1>ðŸŒŸ PokÃ©Daimon â€“ Aventuras de Jogos</h1>
+  <div class="banner-video">
+    <video autoplay muted loop playsinline>
+      <source src="banner_pokedaemon_inicial.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos.
+    </video>
+  </div>
 
-  <div id="banners"></div>
+  <section class="materias" id="materias-dinamicas">
+    <!-- Conteúdo das matérias será inserido via JavaScript -->
+  </section>
 
   <footer>
-    PokÃ©Daimon Â© 2025 â€“ Projeto de fÃ£ independente.<br>
-    Este site nÃ£o possui afiliaÃ§Ã£o oficial com Nintendo ou The PokÃ©mon Company.
+    PokéDaimon &copy; 2025 – Projeto de fã independente.<br/>
+    Este site não possui afiliação oficial com Nintendo ou The Pokémon Company.
   </footer>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('nav-menu');
-      menu.classList.toggle('open');
-    }
-  </script>
-
   <script src="materiais.js"></script>
-  <script src="main.js"></script>
+  <script>
+    const container = document.getElementById("materias-dinamicas");
+
+    materias.slice(0, 3).forEach(materia => {
+      const card = document.createElement("div");
+      card.className = "materia";
+      card.innerHTML = `
+        <a href="${materia.link}">
+          <video src="${materia.video}" autoplay muted loop playsinline></video>
+        </a>
+        <div class="materia-content">
+          <h2><a href="${materia.link}">${materia.titulo}</a></h2>
+          <p>Nova matéria em destaque da PokéDaimon.</p>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
 </body>
 </html>
