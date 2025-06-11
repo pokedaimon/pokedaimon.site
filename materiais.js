@@ -6,7 +6,7 @@ const materias = [
     link: "materia1.html"
   },
   {
-    id: "wishingstar",
+    id: "Pokémon Pixelado",
     titulo: "Nascimento do Pokémon Pixelado",
     video: "materia2-capa.mp4",
     link: "nascimento-do-pokemon-pixelado.html"
