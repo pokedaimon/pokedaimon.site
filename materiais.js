@@ -7,8 +7,8 @@ const materias = [
   },
   {
     id: "wishingstar",
-    titulo: "Wishing Stars e Arceus",
+    titulo: "Nascimento do Pokémon Pixelado",
     video: "materia2-capa.mp4",
-    link: "materia2.html"
+    link: "nascimento-do-pokemon-pixelado.html"
   }
 ];
